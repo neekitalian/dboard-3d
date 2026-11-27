@@ -87,7 +87,9 @@ function scene(mode){
 }
 const rows=groups.map((g,i)=>`<button class="part-button" data-select="${i}" aria-pressed="false"><span class="part-no">0${i+1}</span><span><strong>${g.title}</strong><small>${g.en}</small></span><span class="part-arrow" aria-hidden="true">↗</span></button>`).join('');
 const extraCSS=`
-.compare-active .controlbar{display:none}
+.compare-active .controlbar,.product-active .controlbar{display:none}
+.product-active .workbench{grid-template-columns:1fr}.product-active aside{display:none}.product-shots{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:12px}.product-shots img{width:100%;height:auto;display:block}.product-active .iso-stage{min-height:0}
+@media(max-width:540px){.product-shots{grid-template-columns:1fr}}
 .cad-part[data-layer="0"] .shade-4{fill:var(--anatomy-shade-2);stroke:var(--anatomy-shade-2)}
 .cad-part[data-layer="5"] .shade-4{fill:var(--anatomy-hi);stroke:var(--anatomy-hi)}
 .cad-part[data-layer="5"][data-dim] .shade-4{fill:var(--anatomy-top);stroke:var(--anatomy-top)}
@@ -104,15 +106,16 @@ const extraCSS=`
 @media(max-width:540px){.iso-page{width:calc(100% - 28px);margin:18px auto}.heading{display:block;margin-bottom:20px}h1{font-size:28px}.specs{margin-top:24px;text-align:left;justify-content:space-between}.specs b{font-size:20px}.subtitle{font-size:12px;line-height:1.8}.toolbar{gap:6px}.tabs button{padding:8px 9px;font-size:11px}.action{padding:8px;font-size:11px}.iso-plate-corner{font-size:8px}.controlbar{gap:12px;margin-top:14px}.part-button strong{font-size:12px}.part-button small{font-size:8px}.part-button{gap:9px}.topline{font-size:9px}.iso-caption{font-size:10px}.part-info p{font-size:12px}.note{font-size:10px}.controlbar .action{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 `;
-const stages=`<div class="iso-stage" role="group" aria-label="Internal parts. Use arrow keys to adjust separation and Space to open or close." tabindex="0"><div class="scene" data-scene="anatomy">${scene('anatomy')}</div><div class="scene" data-scene="inside" hidden>${scene('inside')}</div><div class="scene" data-scene="compare" hidden>${scene('compare')}</div></div>`;
-const plate=k.plateHtml({fig:'FIG. 01',title:'KEYBOARD / v02',hint:'',readout:'49 PARTS · 60 × 90 × 5.8 mm',caption:'',body:stages});
-const htmlbody=`<div class="workbench"><section><div class="toolbar"><nav class="tabs" aria-label="View"><button data-view="exploded" aria-pressed="true">Layers</button><button data-view="inside" aria-pressed="false">Inside</button><button data-view="compare" aria-pressed="false">iPhone</button></nav><button class="action" id="reset">Reset view</button></div>${plate}<div class="controlbar"><div class="range-wrap"><label for="explode">Separation</label><input id="explode" type="range" min="0" max="100" value="78" aria-label="Layer separation"><output for="explode" id="percent">78%</output></div><button class="action" id="tour" aria-pressed="false">Play</button></div></section><aside><p class="aside-label">PARTS</p><div class="part-list">${rows}</div></aside></div><footer class="foot"><div><a href="../exports/hangul-card-white-v05.glb">Download 3D model ↗</a></div></footer>`;
+const stages=`<div class="iso-stage" role="group" aria-label="Internal parts. Use arrow keys to adjust separation and Space to open or close." tabindex="0"><div class="scene product-shots" data-scene="product"><img src="../renders-white/previews/01-hero-v05.png" alt="White keyboard with smooth opaque touch face, nine visible Hangul zones and white body"><img src="../renders-white/previews/02-top-v05.png" alt="White keyboard viewed from above with nine visible touch zones"></div><div class="scene" data-scene="anatomy" hidden>${scene('anatomy')}</div><div class="scene" data-scene="inside" hidden>${scene('inside')}</div><div class="scene" data-scene="compare" hidden>${scene('compare')}</div></div>`;
+const plate=k.plateHtml({fig:'FIG. 01',title:'KEYBOARD / v05',hint:'',readout:'49 PARTS · 60 × 90 × 5.8 mm',caption:'',body:stages});
+const htmlbody=`<div class="workbench"><section><div class="toolbar"><nav class="tabs" aria-label="View"><button data-view="product" aria-pressed="true">Product</button><button data-view="exploded" aria-pressed="false">Layers</button><button data-view="inside" aria-pressed="false">Inside</button><button data-view="compare" aria-pressed="false">iPhone</button></nav><button class="action" id="reset">Reset view</button></div>${plate}<div class="controlbar"><div class="range-wrap"><label for="explode">Separation</label><input id="explode" type="range" min="0" max="100" value="78" aria-label="Layer separation"><output for="explode" id="percent">78%</output></div><button class="action" id="tour" aria-pressed="false">Play</button></div></section><aside><p class="aside-label">PARTS</p><div class="part-list">${rows}</div></aside></div><footer class="foot"><div><a href="../exports/hangul-card-white-v05.glb">Download 3D model ↗</a></div></footer>`;
 const live=`
 const groups=${JSON.stringify(groups)};
 const stage=document.querySelector('.iso-stage'), range=document.querySelector('#explode'),readout=document.querySelector('[data-readout]'),percent=document.querySelector('#percent');
 const scene=document.querySelector('[data-scene=anatomy]'), layerRoot=scene.querySelector('.scene-parts'), parts=[...layerRoot.children];
 const compare=document.querySelector('[data-scene=compare]');
 const internal=document.querySelector('[data-scene=inside]');
+const product=document.querySelector('[data-scene=product]');
 let view='exploded',x=.78,target=.78,selected=-1,raf=0,last=0,visible=true,touring=false,clock=0,zoom=1,panX=0,panY=0,drag=null;
 const still=matchMedia('(prefers-reduced-motion: reduce)');
 let order='';
@@ -131,7 +134,7 @@ function tick(now){const dt=last?Math.min((now-last)/1000,1/30):1/60;last=now;if
 function run(){if(!raf&&visible){last=0;raf=requestAnimationFrame(tick);}}
 function tour(on){touring=on&&!still.matches;document.querySelector('#tour').setAttribute('aria-pressed',String(touring));document.querySelector('#tour').textContent=touring?'Pause':'Play';if(touring)run();}
 function select(n){selected=selected===n?-1:n;document.querySelectorAll('[data-select]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.select===selected)));paint();}
-function mode(next){view=next;tour(false);zoomTo(1);document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));scene.hidden=view!=='exploded';internal.hidden=view!=='inside';compare.hidden=view!=='compare';document.body.classList.toggle('compare-active',view==='compare');range.disabled=view!=='exploded';target=view==='inside'?0:.78;range.value=Math.round(target*100);paint();run();}
+function mode(next){view=next;product.hidden=view!=='product';document.body.classList.toggle('product-active',view==='product');tour(false);zoomTo(1);document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));scene.hidden=view!=='exploded';internal.hidden=view!=='inside';compare.hidden=view!=='compare';document.body.classList.toggle('compare-active',view==='compare');range.disabled=view!=='exploded';target=view==='inside'?0:.78;range.value=Math.round(target*100);paint();run();}
 range.addEventListener('input',()=>{tour(false);target=+range.value/100;run();});
 document.querySelectorAll('[data-select]').forEach(b=>b.addEventListener('click',()=>select(+b.dataset.select)));
 stage.addEventListener('click',e=>{const p=e.target.closest('.cad-part');if(p&&+p.dataset.layer>=0)select(+p.dataset.layer);});
@@ -147,6 +150,7 @@ new IntersectionObserver(es=>{visible=es.at(-1).isIntersecting;if(visible)run();
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&raf){cancelAnimationFrame(raf);raf=0;}else run();});
 still.addEventListener('change',()=>{if(still.matches)tour(false);run();});
 window.anatomy={mode,select,setExplode(value){tour(false);target=value;range.value=Math.round(value*100);run();},state:()=>({view,x,target,selected,partCount:parts.length,reduced:still.matches,touring}),source:${JSON.stringify(data.source)}};
+mode('product');
 paint();
 `;
 // Reset avoids fake part IDs; all UI state remains based on the actual part list.

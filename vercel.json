@@ -12,6 +12,10 @@
     {
       "source": "/exports/:path*",
       "destination": "/outputs/exports/:path*"
+    },
+    {
+      "source": "/renders-white/:path*",
+      "destination": "/outputs/renders-white/:path*"
     }
   ]
 }
