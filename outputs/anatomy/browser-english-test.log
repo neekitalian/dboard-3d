@@ -1,0 +1,6 @@
+eval: "Inside the keyboard"
+eval: "Centered ring with 1.50 mm edge margin. Segmentation, polarity and holding force are not specified."
+eval: "iPhone 16: 71.6 × 147.6 × 7.8 mm. Keyboard: 83.8% of phone width, 61.0% of phone height."
+eval: "English theme control passed"
+shot outputs/anatomy/preview-light.png · readout "49 PARTS · 60 × 90 × 5.8 mm"
+console: clean

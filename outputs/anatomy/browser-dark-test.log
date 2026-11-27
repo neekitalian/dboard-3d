@@ -1,8 +1,8 @@
 eval: "49 actual CAD parts"
-eval: "磁吸环"
+eval: "Magnet"
 shot outputs/anatomy/selected-magnet.png · readout "MAGNET RING"
 eval: "reset passed"
-eval: {"view":"inside","x":0.0004027387495362892,"target":0,"selected":-1,"partCount":49,"reduced":false,"touring":false}
+eval: {"view":"inside","x":0.00037551112110428483,"target":0,"selected":-1,"partCount":49,"reduced":false,"touring":false}
 shot outputs/anatomy/inside.png · readout "49 PARTS · 60 × 90 × 5.8 mm"
 line ends: 0 of 0 ends on 0 lines float
 shot outputs/anatomy/iphone-comparison.png · readout "iPHONE 16 / 71.6 × 147.6 mm"
