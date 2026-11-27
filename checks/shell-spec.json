@@ -1,0 +1,10 @@
+{
+  "expect_solids": 1,
+  "expect_shells": 1,
+  "features": [
+    {"name": "four_screw_clearance_bores", "type": "cylinder", "diameter_mm": 1.6, "count": 4, "diameter_tolerance_mm": 0.01},
+    {"name": "four_bosses", "type": "cylinder", "diameter_mm": 3.5, "count": 4, "diameter_tolerance_mm": 0.01},
+    {"name": "screw_axes_xy", "type": "positioned_cylinders", "axis": "z", "diameter_mm": 1.6,
+      "positions_mm": [[-24,-39],[-24,39],[24,-39],[24,39]], "position_tolerance_mm": 0.01}
+  ]
+}

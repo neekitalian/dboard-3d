@@ -1,0 +1,271 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "magnet_shell_clearance",
+      "parts": [
+        "magnet_ring_envelope_no_polarization",
+        "bottom_shell"
+      ],
+      "minimum_mm": 0.2,
+      "measured_mm": 0.19999999999999996,
+      "passed": true
+    },
+    {
+      "check": "battery_ring_clearance",
+      "parts": [
+        "magnet_ring_envelope_no_polarization",
+        "lipo_envelope_no_capacity_claim"
+      ],
+      "minimum_mm": 0.2,
+      "measured_mm": 1.5,
+      "passed": true
+    },
+    {
+      "check": "battery_pcb_vertical_gap",
+      "parts": [
+        "lipo_envelope_no_capacity_claim",
+        "pcb_sparse_placeholder"
+      ],
+      "minimum_mm": 0.2,
+      "measured_mm": 0.20000000000000018,
+      "passed": true
+    },
+    {
+      "check": "film_frame_per_side_gap",
+      "parts": [
+        "top_cover_flexible_pc",
+        "top_frame"
+      ],
+      "minimum_mm": 0.15,
+      "measured_mm": 0.14999999999999686,
+      "passed": true
+    },
+    {
+      "check": "connector_shell_gap",
+      "parts": [
+        "usb_c_generic_envelope",
+        "bottom_shell"
+      ],
+      "minimum_mm": 0.2,
+      "measured_mm": 0.19999999999999973,
+      "passed": true
+    },
+    {
+      "check": "dome_arrow_left_carrier_gap",
+      "parts": [
+        "dome_arrow_left",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.09999999999999964,
+      "passed": true
+    },
+    {
+      "check": "actuator_arrow_left_sensor_contact",
+      "parts": [
+        "actuator_arrow_left",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_triangle_carrier_gap",
+      "parts": [
+        "dome_triangle",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000009,
+      "passed": true
+    },
+    {
+      "check": "actuator_triangle_sensor_contact",
+      "parts": [
+        "actuator_triangle",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_arrow_right_carrier_gap",
+      "parts": [
+        "dome_arrow_right",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000142,
+      "passed": true
+    },
+    {
+      "check": "actuator_arrow_right_sensor_contact",
+      "parts": [
+        "actuator_arrow_right",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_chevron_left_carrier_gap",
+      "parts": [
+        "dome_chevron_left",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.09999999999999964,
+      "passed": true
+    },
+    {
+      "check": "actuator_chevron_left_sensor_contact",
+      "parts": [
+        "actuator_chevron_left",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_ring_carrier_gap",
+      "parts": [
+        "dome_ring",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000009,
+      "passed": true
+    },
+    {
+      "check": "actuator_ring_sensor_contact",
+      "parts": [
+        "actuator_ring",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_chevron_right_carrier_gap",
+      "parts": [
+        "dome_chevron_right",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000142,
+      "passed": true
+    },
+    {
+      "check": "actuator_chevron_right_sensor_contact",
+      "parts": [
+        "actuator_chevron_right",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_numeric_123_carrier_gap",
+      "parts": [
+        "dome_numeric_123",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.09999999999999964,
+      "passed": true
+    },
+    {
+      "check": "actuator_numeric_123_sensor_contact",
+      "parts": [
+        "actuator_numeric_123",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_diamond_carrier_gap",
+      "parts": [
+        "dome_diamond",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000009,
+      "passed": true
+    },
+    {
+      "check": "actuator_diamond_sensor_contact",
+      "parts": [
+        "actuator_diamond",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "dome_return_carrier_gap",
+      "parts": [
+        "dome_return",
+        "dome_carrier_pet"
+      ],
+      "minimum_mm": 0.1,
+      "measured_mm": 0.10000000000000142,
+      "passed": true
+    },
+    {
+      "check": "actuator_return_sensor_contact",
+      "parts": [
+        "actuator_return",
+        "touch_sensor_flex_placeholder"
+      ],
+      "minimum_mm": 0.0,
+      "measured_mm": 0.0,
+      "passed": true
+    },
+    {
+      "check": "all_nine_dome_base_footprints_supported",
+      "passed": true
+    },
+    {
+      "check": "nine_pressed_dome_actuator_proxy_envelopes",
+      "passed": true,
+      "limits": "no deformable sensor/film, spring stresses, preload or force"
+    },
+    {
+      "check": "locator_shift_x",
+      "shared_volume_mm3": 3.1651627846225527,
+      "passed": true
+    },
+    {
+      "check": "locator_shift_y",
+      "shared_volume_mm3": 2.765162784621951,
+      "passed": true
+    },
+    {
+      "check": "planted_oversize_ring_detected",
+      "shared_volume_mm3": 10.647801962811037,
+      "passed": true
+    },
+    {
+      "check": "planted_battery_ring_collision_detected",
+      "shared_volume_mm3": 107.07694195157303,
+      "passed": true
+    }
+  ],
+  "part_count": 49,
+  "limits": [
+    "No RF/electromagnetic/thermal/charging proof",
+    "No cell swelling or cable routing proof",
+    "Unthreaded fasteners and generic connector envelopes",
+    "No continuous elastic motion or dome force analysis"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "agentcad-diff-v01-v02.json": {
+    "sha256": "3869487213723df17fdce172aa5289b021c41b023c36e3436a88c3ecc6186330",
+    "status": "success",
+    "passed": null
+  },
+  "agentcad-shell-spec-v02.json": {
+    "sha256": "b1fc526bb3f279f152d4bbc9f59e2ada526ac94d4245b8538987470ba6a899b3",
+    "status": "success",
+    "passed": true
+  },
+  "agentcad-validation-v01.json": {
+    "sha256": "aaa97eb1096f962d91f0ebd98accf162c3479dc8bed1928a6665da309bd438a1",
+    "status": "success",
+    "passed": true
+  },
+  "agentcad-validation-v02.json": {
+    "sha256": "8fa36ea8140d3934655c54808ec08529dc8d437c3767e3c3d23e9bb6b06a54de",
+    "status": "success",
+    "passed": true
+  },
+  "clearance-v01.json": {
+    "sha256": "954c76dac56a69a36318b11d90aaeeba33af1baa9cf88e13b41140826c12c59d",
+    "status": null,
+    "passed": true
+  },
+  "clearance-v02.json": {
+    "sha256": "954c76dac56a69a36318b11d90aaeeba33af1baa9cf88e13b41140826c12c59d",
+    "status": null,
+    "passed": true
+  },
+  "dfm-bottom-shell-fdm-v01.json": {
+    "sha256": "ed8cc53d56c4f8448bb5be1ce471c4d18dd147630a127f7f5a7cb56a8cf21363",
+    "status": "ok",
+    "passed": true
+  },
+  "dfm-bottom-shell-molding-v01.json": {
+    "sha256": "53ec21dc39d04a06ee659b7449cc1fb0666524a13a486dcbaca49f15fa2108ab",
+    "status": "ok",
+    "passed": true
+  },
+  "dfm-bottom-shell-sla-v01.json": {
+    "sha256": "3dd6e8ac2aa36d918aa8008a70f518f33f0bce4392ec1baf8d0018267b977011",
+    "status": "failed",
+    "passed": false
+  },
+  "dfm-top-frame-fdm-v01.json": {
+    "sha256": "e534aea6c9808ceec3f34970a96d57b3775d7545af0c00a65172cad866b07316",
+    "status": "ok",
+    "passed": true
+  },
+  "dfm-top-frame-molding-v01.json": {
+    "sha256": "d323b5a04252b9d4a688c5936271f8fcc71b5935ead6a3eb814ea827d191b2b9",
+    "status": "ok",
+    "passed": true
+  },
+  "dfm-top-frame-sla-v01.json": {
+    "sha256": "f43e1c58db580c08d1cff16b8b6e4773db7b66c8be5ea3b5e9dcdcf58f098db6",
+    "status": "failed",
+    "passed": false
+  },
+  "inspect-v01.json": {
+    "sha256": "2d1be251171eebf94144a268d77d55010d358e5e35ffa286a02339ebe2e64262",
+    "status": null,
+    "passed": null
+  },
+  "interference-v01.json": {
+    "sha256": "7823babf3a17de3c3703e81dc98a9886a8c7044b0036a270a1e141dc9d751353",
+    "status": "ok",
+    "passed": true
+  },
+  "interference-v02.json": {
+    "sha256": "c47897d8bb6e17c01114ef0c15104d383e4f063d091858a9d1d2edaa281862ad",
+    "status": "ok",
+    "passed": true
+  }
+}
