@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/outputs/anatomy/index.html"
+    },
+    {
+      "source": "/index-light.html",
+      "destination": "/outputs/anatomy/index-light.html"
+    },
+    {
+      "source": "/exports/:path*",
+      "destination": "/outputs/exports/:path*"
+    }
+  ]
+}

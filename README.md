@@ -16,6 +16,8 @@ This is a review prototype. Resin-print thin features need revision; FDM and mol
 
 ## View
 
+Live viewer: <https://dboard-3d.vercel.app/>. Vercel routes the homepage to the checked-in viewer and keeps model download links working through `vercel.json`. No build command or framework is required.
+
 Download and extract [the complete viewer package](outputs/anatomy-viewer-v02.zip), then open `anatomy/index.html`. The viewer runs offline and includes **Layers**, **Inside**, and **iPhone** views, part selection, zoom, pan, and dark/light themes.
 
 Or serve the checked-out files:
