@@ -9,7 +9,7 @@ A nine-zone touch keyboard accessory with parametric CAD, 3D models, an interact
 - 60 × 90 × 5.8 mm card with a continuous flexible touch surface.
 - Nine tactile dome zones, rather than mechanical switches.
 - Centered Ø57 mm magnet-ring envelope.
-- Clear cover, monochrome dot-matrix legends and visible internal structure.
+- Opaque smooth black touch face, monochrome dot-matrix legends and visible internal structure.
 - Separate shell, cover, PCB, domes, battery, electronics, magnets, fasteners and legends.
 
 This is a review prototype. Resin-print thin features need revision; FDM and molding warnings remain. Wireless charging, phone fit, key force and electrical functionality are unverified.
@@ -30,15 +30,15 @@ Open <http://127.0.0.1:8766/anatomy/index.html>. GitHub's HTML file preview disp
 
 ## Renders
 
-Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders/01-hero-v03.png), [Top](outputs/renders/02-top-v03.png), [Exploded](outputs/renders/03-exploded-v03.png), and [Attached](outputs/renders/04-attached-v03.png).
+Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-opaque/01-hero-v04.png), [Top](outputs/renders-opaque/02-top-v04.png), [Exploded](outputs/renders-opaque/03-exploded-v04.png), and [Attached](outputs/renders-opaque/04-attached-v04.png).
 
-[Editable Blender scenes](outputs/renders/keyboard-studio-v03.blend) · [Render notes](outputs/renders/README.md). Hangul legends are separate dot objects.
+[Editable Blender scenes](outputs/renders-opaque/keyboard-studio-v04.blend) · [Render notes](outputs/renders-opaque/README.md). Hangul legends are separate dot objects.
 
 ## Models
 
 | File | Purpose |
 |---|---|
-| [Keyboard GLB](outputs/exports/hangul-card-review-v02.glb) | 3D viewing and Blender import |
+| [Keyboard GLB](outputs/exports/hangul-card-opaque-v04.glb) | 3D viewing and Blender import |
 | [Keyboard STEP](outputs/exports/hangul-card-review-v02.step) | CAD editing and engineering review |
 | [Keyboard beside iPhone](outputs/exports/iphone16-keyboard-beside-v02.glb) | Size comparison |
 | [Keyboard on iPhone](outputs/exports/iphone16-keyboard-attached-v02.glb) | Illustrative back placement |
