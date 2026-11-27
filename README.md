@@ -36,9 +36,9 @@ The new thickness target is approximately 3 mm, referenced to the PLAUD Note pub
 
 ## Renders
 
-Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-opaque/01-hero-v04.png), [Top](outputs/renders-opaque/02-top-v04.png), [Exploded](outputs/renders-opaque/03-exploded-v04.png), and [Attached](outputs/renders-opaque/04-attached-v04.png).
+Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-white/01-hero-v05.png), [Top](outputs/renders-white/02-top-v05.png), [Exploded](outputs/renders-white/03-exploded-v05.png), and [Attached](outputs/renders-white/04-attached-v05.png).
 
-[Editable Blender scenes](outputs/renders-opaque/keyboard-studio-v04.blend) · [Render notes](outputs/renders-opaque/README.md). Hangul legends are separate dot objects.
+[Editable Blender scenes](outputs/renders-white/keyboard-studio-v05.blend) · [Render notes](outputs/renders-white/README.txt). Hangul legends are separate dot objects.
 
 ## Models
 

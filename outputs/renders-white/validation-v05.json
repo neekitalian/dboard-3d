@@ -1,0 +1,135 @@
+{
+  "scenes": [
+    {
+      "scene": "01 Hero",
+      "source_mesh_count": 49,
+      "glyphs": [
+        "ㄱ",
+        "ㄴ",
+        "ㅁ",
+        "ㅅ",
+        "ㅇ",
+        "ㅏ",
+        "ㅓ",
+        "ㅗ",
+        "ㅜ"
+      ],
+      "checks": {
+        "cycles": true,
+        "samples_256": true,
+        "long_edge_3000": true,
+        "lens_85mm": true,
+        "denoising": true,
+        "agx": true,
+        "nine_hangul": true
+      }
+    },
+    {
+      "scene": "02 Top",
+      "source_mesh_count": 49,
+      "glyphs": [
+        "ㄱ",
+        "ㄴ",
+        "ㅁ",
+        "ㅅ",
+        "ㅇ",
+        "ㅏ",
+        "ㅓ",
+        "ㅗ",
+        "ㅜ"
+      ],
+      "checks": {
+        "cycles": true,
+        "samples_256": true,
+        "long_edge_3000": true,
+        "lens_85mm": true,
+        "denoising": true,
+        "agx": true,
+        "nine_hangul": true
+      }
+    },
+    {
+      "scene": "03 Exploded",
+      "source_mesh_count": 49,
+      "glyphs": [
+        "ㄱ",
+        "ㄴ",
+        "ㅁ",
+        "ㅅ",
+        "ㅇ",
+        "ㅏ",
+        "ㅓ",
+        "ㅗ",
+        "ㅜ"
+      ],
+      "checks": {
+        "cycles": true,
+        "samples_256": true,
+        "long_edge_3000": true,
+        "lens_85mm": true,
+        "denoising": true,
+        "agx": true,
+        "nine_hangul": true
+      }
+    },
+    {
+      "scene": "04 Attached",
+      "source_mesh_count": 49,
+      "glyphs": [
+        "ㄱ",
+        "ㄴ",
+        "ㅁ",
+        "ㅅ",
+        "ㅇ",
+        "ㅏ",
+        "ㅓ",
+        "ㅗ",
+        "ㅜ"
+      ],
+      "checks": {
+        "cycles": true,
+        "samples_256": true,
+        "long_edge_3000": true,
+        "lens_85mm": true,
+        "denoising": true,
+        "agx": true,
+        "nine_hangul": true
+      }
+    }
+  ],
+  "scope": "Scene configuration and editable glyph checks. Final image review is separate; no physical validation.",
+  "final_images": [
+    {
+      "file": "01-hero-v05.png",
+      "size": [
+        3000,
+        2400
+      ],
+      "visual_review": "passed"
+    },
+    {
+      "file": "02-top-v05.png",
+      "size": [
+        2400,
+        3000
+      ],
+      "visual_review": "passed"
+    },
+    {
+      "file": "03-exploded-v05.png",
+      "size": [
+        3000,
+        3000
+      ],
+      "visual_review": "passed"
+    },
+    {
+      "file": "04-attached-v05.png",
+      "size": [
+        2400,
+        3000
+      ],
+      "visual_review": "passed"
+    }
+  ]
+}
