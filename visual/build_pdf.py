@@ -38,14 +38,13 @@ def wrap(c,s,x,y,width,size=11,leading=15.5,color=BLACK):
 def head(c,title):text(c,42,H-60,title,22,font='Head')
 def overview(c,page=None):
  head(c,'键盘结构')
- for x,big,small in [(42,'60 × 90 mm','外形尺寸'),(222,'5.8 mm','当前模型厚度'),(402,'约 3 mm','下一版厚度目标')]:
+ for x,big,small in [(42,'60 × 90 mm','外形尺寸')]:
   text(c,x,718,big,18,font='Head');text(c,x,697,small,10,GREY)
  c.saveState();c.translate(30,300);c.scale(.75,.75);renderPDF.draw(drawing,c,0,0);c.restoreState()
  for i,(name,title,description) in enumerate(parts):
   p=anchors[name];x=30+(p['right']-260)*.5625;y=300+(690-p['y'])*.5625;ly=629-i*42
   if i==4:y-=11
   c.setStrokeColor(HexColor('#a0a5a8'));c.setLineWidth(.4);c.lines([(x,y,334,y),(334,y,350,ly-3)])
-  c.setFillColor(BLACK);c.circle(x,y,6.5,fill=1,stroke=0);c.setFillColor(HexColor('#ffffff'));c.setFont('Helvetica',7);c.drawCentredString(x,y-2.5,str(i+1))
   text(c,360,ly,title,11,font='Head');wrap(c,description,360,ly-17,192,9.5,13.2,GREY)
  c.showPage()
 def detail(c,page=None):
@@ -56,8 +55,6 @@ def detail(c,page=None):
  text(c,262,698,'外观',13,font='Head')
  y=wrap(c,'全白、不透明的光滑触控面。九个触觉区由浅灰分区线和点阵韩文字样识别。',262,673,291,11,16)
  wrap(c,'点按与跨区滑动共用一块连续面层。',262,y-10,291,11,16)
- text(c,262,586,'厚度',13,font='Head')
- wrap(c,'当前模型厚度为 5.8 mm，下一版目标约 3 mm。',262,561,291,11,16)
  text(c,42,426,'关键尺寸',14,font='Head')
  rows=[('磁吸环','外径 57 mm，内径 46 mm，厚 0.8 mm'),('电池','24 × 10 × 2.5 mm'),('PCB','54 × 76 × 0.6 mm'),('金属弹片','9 个，直径 5 mm，自由高度 0.3 mm'),('USB C 接口','8.4 × 7 × 2.6 mm')]
  y=392
@@ -68,7 +65,7 @@ def make(name,pages):
  c=canvas.Canvas(str(OUT/name),pagesize=A4,pageCompression=1);c.setTitle('键盘结构说明');c.setAuthor('dboard3d')
  for p in pages:p(c)
  c.save()
-make('keyboard-anatomy-zh-v05.pdf',[overview,detail])
+make('keyboard-anatomy-zh-v05.pdf',[overview])
 make('keyboard-anatomy-poster-zh-v05.pdf',[overview])
 make('keyboard-anatomy-notes-zh-v05.pdf',[detail])
 print('Created clean typography PDF editions')
