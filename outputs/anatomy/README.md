@@ -1,6 +1,6 @@
 # Keyboard viewer
 
-Open index.html (dark) or index-light.html (light). Each page includes its SVG, styles and scripts and works offline. Keep the anatomy/ and exports/ folders together for the model download links. The complete package is ../anatomy-viewer-v02.zip.
+Open index.html. The viewer is white-only; index-light.html is an identical compatibility entry. Each page includes its SVG, styles and scripts and works offline. Keep the anatomy/ and exports/ folders together for the model download links. The complete package is ../anatomy-viewer-v02.zip.
 
 ## Views
 
