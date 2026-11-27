@@ -40,6 +40,12 @@ Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-
 
 [Editable Blender scenes](outputs/renders-white/keyboard-studio-v05.blend) · [Render notes](outputs/renders-white/README.txt). Hangul legends are separate dot objects.
 
+## Chinese PDF
+
+[Annotated anatomy PDF](outputs/pdf/keyboard-anatomy-zh-v05.pdf): two A4 pages with the website CAD figure, numbered Chinese component notes, dimensions and manufacturer validation requirements. The PDF button on the live viewer opens this document.
+
+Rebuild with `python3 visual/export_pdf_source.py` then `python3 visual/build_pdf.py` (ReportLab, svglib, lxml and fontTools; tested with the macOS Heiti SC font).
+
 ## Models
 
 | File | Purpose |
