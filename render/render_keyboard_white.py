@@ -325,8 +325,8 @@ def build():
     bpy.ops.wm.save_as_mainfile(filepath=str(BLEND),compress=True)
     bpy.ops.object.select_all(action='DESELECT')
     for o in hero.objects:
-        if o.type in ('MESH','CURVE') and o.get('role')!='phone' and ('role' in o):o.select_set(not o.hide_render)
-    bpy.ops.export_scene.gltf(filepath=str(ROOT/'outputs/exports/hangul-card-white-v05.glb'),use_selection=True,export_apply=True)
+        if o.type in ('MESH','CURVE') and o.get('role') in {'cover','touch','domes','pcb','magnet','electronics','shell'}:o.select_set(not o.hide_render)
+    bpy.ops.export_scene.gltf(filepath=str(ROOT/'outputs/exports/hangul-card-white-v05.glb'),use_selection=True,use_active_scene=True,export_apply=True)
     report={'source_glb':str(GLB.relative_to(ROOT)),'cad_source_meshes':49,'render_style':'solid white opaque body and smooth touch face; neutral grey legends for readability; no red accent',
       'skill':'kevinbadi/blender-skills/product-polish, custom headless Cycles adaptation','skill_commit':'b2f0f816d320b56ae86d52597a35284e0e6cc929',
       'shots':records,'legend_layout':[[g[1],g[2],g[3]] for g in GLYPHS],

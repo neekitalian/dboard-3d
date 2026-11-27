@@ -1,0 +1,69 @@
+{
+  "source_glb": "keyboard-white-v05.glb",
+  "source_mesh_count": 232,
+  "source_bounds_mm": [
+    60.00000238418579,
+    90.00001847743988,
+    5.887005909484877
+  ],
+  "axis": "+Z up",
+  "body_nominal_mm": [
+    60,
+    90,
+    5.8
+  ],
+  "appearance_details": "Printed dots and status proxy may extend beyond nominal body thickness.",
+  "checks": [
+    {
+      "format": "obj",
+      "bounds_mm": [
+        60.000003814697266,
+        90.00001525878906,
+        5.887006083923552
+      ],
+      "meshes": 232,
+      "round_trip_bounds_pass": true
+    },
+    {
+      "format": "stl",
+      "bounds_mm": [
+        60.000003814697266,
+        90.00001525878906,
+        5.8870061031998375
+      ],
+      "meshes": 1,
+      "round_trip_bounds_pass": true
+    },
+    {
+      "format": "ply",
+      "bounds_mm": [
+        60.000003814697266,
+        90.00001525878906,
+        5.8870061031998375
+      ],
+      "meshes": 1,
+      "round_trip_bounds_pass": true
+    },
+    {
+      "format": "fbx",
+      "bounds_mm": [
+        60.000017285346985,
+        90.00002592802048,
+        5.887005909484877
+      ],
+      "meshes": 232,
+      "round_trip_bounds_pass": true
+    },
+    {
+      "format": "gltf",
+      "bounds_mm": [
+        60.00000238418579,
+        90.00001847743988,
+        5.887005909484877
+      ],
+      "meshes": 232,
+      "round_trip_bounds_pass": true
+    }
+  ],
+  "scope": "File conversion and round-trip bounds only; no physical or printability validation."
+}

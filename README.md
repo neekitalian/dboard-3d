@@ -14,6 +14,12 @@ A nine-zone touch keyboard accessory with parametric CAD, 3D models, an interact
 
 This is a review prototype. Resin-print thin features need revision; FDM and molding warnings remain. Wireless charging, phone fit, key force and electrical functionality are unverified.
 
+## HTML and formats
+
+[Single-file anatomy HTML](outputs/keyboard-anatomy-v05.html) includes Layers, Inside and iPhone with embedded SVG, styles and scripts. Product has been removed from the website. Diagram viewing is self-contained; PDF/model download links need internet.
+
+[Additional 3D formats](outputs/exports/keyboard-white-formats-v05.zip): clean white GLB, glTF + BIN, OBJ + MTL, FBX, STL and PLY, plus the existing engineering STEP. Round-trip bounds were checked. Mesh coordinates for OBJ/STL/PLY are millimeters; the STEP remains the original 5.8 mm engineering review model.
+
 ## View
 
 Live viewer: <https://dboard-3d.vercel.app/>. Vercel routes the homepage to the checked-in viewer and keeps model download links working through `vercel.json`. No build command or framework is required.
@@ -30,7 +36,7 @@ Open <http://127.0.0.1:8766/anatomy/index.html>. GitHub's HTML file preview disp
 
 ## White revision
 
-The latest direction is a solid white opaque body and smooth touch face with visible neutral-grey legends. [White appearance preview](outputs/renders-white/previews/01-hero-v05.png) · [White GLB](outputs/exports/hangul-card-white-v05.glb) · [Manufacturer brief](outputs/spec-white/design-brief-v05.txt).
+The latest direction is a solid white opaque body and smooth touch face with visible neutral-grey legends. [White appearance preview](outputs/renders-white/previews/01-hero-v05.png) · [White GLB](outputs/exports/white-v05/keyboard-white-v05.glb) · [Manufacturer brief](outputs/spec-white/design-brief-v05.txt).
 
 The new thickness target is approximately 3 mm, referenced to the PLAUD Note published 2.99 mm device thickness. Current CAD and appearance previews remain 5.8 mm; the internal stack-up requires redesign and review.
 
