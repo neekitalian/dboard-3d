@@ -48,7 +48,7 @@ Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-
 
 ## Chinese PDF
 
-[Annotated anatomy PDF](outputs/pdf/keyboard-anatomy-zh-v05.pdf): one A4 page with the website CAD figure and Chinese component notes. The PDF button on the live viewer opens this document.
+[Annotated anatomy PDF](outputs/pdf/keyboard-anatomy-zh-v06.pdf): one A4 page with the website CAD figure and Chinese component notes. The PDF button on the live viewer opens this document.
 
 Rebuild with `python3 visual/export_pdf_source.py` then `python3 visual/build_pdf.py` (ReportLab, svglib, lxml and fontTools; tested with macOS Songti SC and Heiti SC fonts).
 

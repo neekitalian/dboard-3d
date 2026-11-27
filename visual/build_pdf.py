@@ -63,6 +63,7 @@ def make(name,pages):
  for p in pages:p(c)
  c.save()
 make('keyboard-anatomy-zh-v05.pdf',[overview])
+make('keyboard-anatomy-zh-v06.pdf',[overview])
 make('keyboard-anatomy-poster-zh-v05.pdf',[overview])
 make('keyboard-anatomy-notes-zh-v05.pdf',[detail])
 print('Created clean typography PDF editions')
