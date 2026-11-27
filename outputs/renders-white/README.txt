@@ -20,3 +20,5 @@ Blender --background --python render/render_keyboard_white.py -- --preview
 Blender --background outputs/renders-white/keyboard-studio-v05.blend --python render/render_keyboard_white.py -- --final
 
 The script selects the tested Apple Metal GPU backend. Use --cpu or adapt the device selection on other platforms.
+
+Glyph correction: ㅏ and ㅓ use the middle (fifth) row of nine for their horizontal arms. Four rows remain above and below; validation checks actual scene mesh positions as well as the source patterns.

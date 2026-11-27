@@ -1,0 +1,5 @@
+{
+  "fix": "Center horizontal arms of ㅏ and ㅓ on row 4 of nine rows. Move 0.52 mm down, four dots per glyph, four scenes.",
+  "moved_dots": 32,
+  "vertical_stem_unchanged": true
+}

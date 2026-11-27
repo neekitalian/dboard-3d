@@ -21,7 +21,8 @@
         "lens_85mm": true,
         "denoising": true,
         "agx": true,
-        "nine_hangul": true
+        "nine_hangul": true,
+        "vowel_arms_centered": true
       }
     },
     {
@@ -45,7 +46,8 @@
         "lens_85mm": true,
         "denoising": true,
         "agx": true,
-        "nine_hangul": true
+        "nine_hangul": true,
+        "vowel_arms_centered": true
       }
     },
     {
@@ -69,7 +71,8 @@
         "lens_85mm": true,
         "denoising": true,
         "agx": true,
-        "nine_hangul": true
+        "nine_hangul": true,
+        "vowel_arms_centered": true
       }
     },
     {
@@ -93,7 +96,8 @@
         "lens_85mm": true,
         "denoising": true,
         "agx": true,
-        "nine_hangul": true
+        "nine_hangul": true,
+        "vowel_arms_centered": true
       }
     }
   ],
