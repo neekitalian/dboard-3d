@@ -50,7 +50,7 @@ Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders-
 
 [Annotated anatomy PDF](outputs/pdf/keyboard-anatomy-zh-v05.pdf): two A4 pages with the website CAD figure, numbered Chinese component notes, dimensions and manufacturer validation requirements. The PDF button on the live viewer opens this document.
 
-Rebuild with `python3 visual/export_pdf_source.py` then `python3 visual/build_pdf.py` (ReportLab, svglib, lxml and fontTools; tested with the macOS Heiti SC font).
+Rebuild with `python3 visual/export_pdf_source.py` then `python3 visual/build_pdf.py` (ReportLab, svglib, lxml and fontTools; tested with macOS Songti SC and Heiti SC fonts).
 
 ## Models
 
