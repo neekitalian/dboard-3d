@@ -12,13 +12,13 @@ A nine-zone touch keyboard accessory with parametric CAD, 3D models, an interact
 - Clear cover, monochrome dot-matrix legends and visible internal structure.
 - Separate shell, cover, PCB, domes, battery, electronics, magnets, fasteners and legends.
 
-This is a review prototype. Resin-print thin features need revision; FDM and molding warnings remain. Wireless charging, phone fit, key force and electrical functionality are unverified. The four final Blender product renders are not yet complete.
+This is a review prototype. Resin-print thin features need revision; FDM and molding warnings remain. Wireless charging, phone fit, key force and electrical functionality are unverified.
 
 ## View
 
 Live viewer: <https://dboard-3d.vercel.app/>. Vercel routes the homepage to the checked-in viewer and keeps model download links working through `vercel.json`. No build command or framework is required.
 
-Download and extract [the complete viewer package](outputs/anatomy-viewer-v02.zip), then open `anatomy/index.html`. The viewer runs offline and includes **Layers**, **Inside**, and **iPhone** views, part selection, zoom, pan, and dark/light themes.
+Download and extract [the complete viewer package](outputs/anatomy-viewer-v02.zip), then open `anatomy/index.html`. The viewer runs offline and includes **Layers**, **Inside**, and **iPhone** views, part selection, zoom, pan, and a white-only interface.
 
 Or serve the checked-out files:
 
@@ -27,6 +27,12 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory outputs
 ```
 
 Open <http://127.0.0.1:8766/anatomy/index.html>. GitHub's HTML file preview displays source; it does not run the viewer.
+
+## Renders
+
+Four headless Blender / Cycles product shots at 3000 px: [Hero](outputs/renders/01-hero-v03.png), [Top](outputs/renders/02-top-v03.png), [Exploded](outputs/renders/03-exploded-v03.png), and [Attached](outputs/renders/04-attached-v03.png).
+
+[Editable Blender scenes](outputs/renders/keyboard-studio-v03.blend) · [Render notes](outputs/renders/README.md). Hangul legends are separate dot objects.
 
 ## Models
 
@@ -88,7 +94,7 @@ cad run checks/anatomy_data.py
 - Keyboard static interference and specified clearance checks pass.
 - Independent STEP validity, screw-hole and boss checks pass.
 - Both iPhone comparison GLBs imported into Blender with their expected object counts and bounds.
-- English viewer controls, both themes, mobile layout, keyboard navigation, zoom/pan and reduced motion were checked in a browser.
+- English viewer controls, white-only layout, mobile layout, keyboard navigation, zoom/pan and reduced motion were checked in a browser.
 - Resin printing checks **fail** on thin features; FDM and injection-molding checks retain warnings.
 
 See [viewer notes](outputs/anatomy/README.md), [CAD review](outputs/phase-1/REVIEW-v02.md), and the raw JSON reports under `outputs/`. Earlier specification and CAD review documents preserve the original Chinese review history; the viewer and current project README are English.
