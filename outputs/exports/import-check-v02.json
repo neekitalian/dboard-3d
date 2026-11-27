@@ -1,0 +1,33 @@
+{
+  "imported_in": "Blender 5.3.0",
+  "mesh_objects": 49,
+  "bounds_mm": [
+    60.00000238418579,
+    90.00001847743988,
+    5.800013396096482
+  ],
+  "separate_legend_objects": [
+    "editable_monochrome_legends/legend_arrow_left",
+    "editable_monochrome_legends/legend_arrow_right",
+    "editable_monochrome_legends/legend_chevron_left",
+    "editable_monochrome_legends/legend_chevron_right",
+    "editable_monochrome_legends/legend_diamond",
+    "editable_monochrome_legends/legend_numeric_123",
+    "editable_monochrome_legends/legend_return",
+    "editable_monochrome_legends/legend_ring",
+    "editable_monochrome_legends/legend_triangle"
+  ],
+  "status": "pass",
+  "limits": "Import, bounds and names only; not wireless charging, mechanics or print certification.",
+  "step_matches_validated_candidate": true,
+  "files": {
+    "hangul-card-review-v02.glb": {
+      "bytes": 7152284,
+      "sha256": "22e692e5781354c7f072dd70a9549288b8d699b30be2a8f8239a6d0b7aa4ec8b"
+    },
+    "hangul-card-review-v02.step": {
+      "bytes": 2554243,
+      "sha256": "fc4eadb09ad969df4e4c6a00e323c1fc5d93ca1244baa52be45cd080d0f947bb"
+    }
+  }
+}
