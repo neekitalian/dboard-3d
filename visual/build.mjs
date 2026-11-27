@@ -11,7 +11,7 @@ import * as G from './vendor/anatomy/lathe.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const out=resolve(root,'outputs/anatomy');mkdirSync(out,{recursive:true});
 const data=JSON.parse(readFileSync(resolve(out,'cad-parts-v02.json'),'utf8'));
-const theme=process.argv.includes('--light')?'light':'dark';
+const theme='light';
 const W=1060,H=760;
 const groups=[
  {id:'shell',title:'Shell',en:'ENCLOSURE',detail:'',text:'',move:[0,0,0]},
@@ -87,12 +87,12 @@ function scene(mode){
 }
 const rows=groups.map((g,i)=>`<button class="part-button" data-select="${i}" aria-pressed="false"><span class="part-no">0${i+1}</span><span><strong>${g.title}</strong><small>${g.en}</small></span><span class="part-arrow" aria-hidden="true">↗</span></button>`).join('');
 const extraCSS=`
-.iso[data-theme="dark"]{--anatomy-top:#343434;--anatomy-shade-0:#191919;--anatomy-shade-1:#202020;--anatomy-shade-2:#282828;--anatomy-shade-3:#303030;--anatomy-mid:#969696;--anatomy-lit-top:#555555;--anatomy-lit-shade:#383838}
 .compare-active .controlbar{display:none}
 .cad-part[data-layer="0"] .shade-4{fill:var(--anatomy-shade-2);stroke:var(--anatomy-shade-2)}
 .cad-part[data-layer="5"] .shade-4{fill:var(--anatomy-hi);stroke:var(--anatomy-hi)}
 .cad-part[data-layer="5"][data-dim] .shade-4{fill:var(--anatomy-top);stroke:var(--anatomy-top)}
-:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}
+.iso[data-theme="light"]{--anatomy-page:#fff;--anatomy-card:#fff;--anatomy-paper:#fff}
 .iso-page{width:min(1376px,100% - 80px);margin:40px auto 44px}.topline{display:flex;justify-content:space-between;align-items:center;font:11px var(--anatomy-mono);letter-spacing:.08em;color:var(--anatomy-muted);padding-bottom:20px;border-bottom:1px solid var(--anatomy-faint)}
 .theme-button{background:none;border:1px solid var(--anatomy-faint);color:var(--anatomy-text);padding:8px 12px;cursor:pointer;font:inherit}.heading{display:flex;justify-content:space-between;align-items:flex-end;margin:38px 0 28px;gap:20px}h1{font-size:36px;letter-spacing:-.045em;font-weight:550;color:var(--anatomy-strong);line-height:1.2;margin:0 0 12px}.subtitle{margin:0;font-size:13px;color:var(--anatomy-muted)}.specs{display:flex;gap:26px;font:12px var(--anatomy-mono);text-align:right}.specs b{display:block;color:var(--anatomy-strong);font-size:23px;font-weight:450;margin-bottom:7px}.specs span{font-size:10px;color:var(--anatomy-muted)}
 .workbench{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:24px}.iso-figure{margin:0}.iso-plate{box-shadow:none;border:1px solid var(--anatomy-faint);border-radius:3px;background:var(--anatomy-card);overflow:hidden}.iso-stage{width:100%;min-height:430px;position:relative;touch-action:pan-y;overflow:hidden}.iso-svg{width:100%;height:auto;display:block}.iso-plate-corner{font-size:10px;letter-spacing:.025em}.iso-plate-corners{pointer-events:none}.iso-legend{margin-top:12px;font-size:11px;line-height:1.8;max-width:700px}.iso-caption{color:var(--anatomy-muted)}.scene[hidden]{display:none}.scene{transform-origin:center}.mesh-face{stroke-width:.12px;stroke-linejoin:round;vector-effect:non-scaling-stroke}.shade-0{fill:var(--anatomy-shade-0);stroke:var(--anatomy-shade-0)}.shade-1{fill:var(--anatomy-shade-1);stroke:var(--anatomy-shade-1)}.shade-2{fill:var(--anatomy-shade-2);stroke:var(--anatomy-shade-2)}.shade-3{fill:var(--anatomy-shade-3);stroke:var(--anatomy-shade-3)}.shade-4{fill:var(--anatomy-top);stroke:var(--anatomy-top)}
@@ -106,7 +106,7 @@ const extraCSS=`
 `;
 const stages=`<div class="iso-stage" role="group" aria-label="Internal parts. Use arrow keys to adjust separation and Space to open or close." tabindex="0"><div class="scene" data-scene="anatomy">${scene('anatomy')}</div><div class="scene" data-scene="inside" hidden>${scene('inside')}</div><div class="scene" data-scene="compare" hidden>${scene('compare')}</div></div>`;
 const plate=k.plateHtml({fig:'FIG. 01',title:'KEYBOARD / v02',hint:'Slide to separate · Select a part',readout:'49 PARTS · 60 × 90 × 5.8 mm',caption:'',body:stages});
-const htmlbody=`<header class="topline"><span></span><button class="theme-button" id="theme" aria-label="Toggle light and dark theme">${theme==='dark'?'Light':'Dark'} ↗</button></header><div class="workbench"><section><div class="toolbar"><nav class="tabs" aria-label="View"><button data-view="exploded" aria-pressed="true">Layers</button><button data-view="inside" aria-pressed="false">Inside</button><button data-view="compare" aria-pressed="false">iPhone</button></nav><button class="action" id="reset">Reset view</button></div>${plate}<div class="controlbar"><div class="range-wrap"><label for="explode">Separation</label><input id="explode" type="range" min="0" max="100" value="78" aria-label="Layer separation"><output for="explode" id="percent">78%</output></div><button class="action" id="tour" aria-pressed="false">Play</button></div><p class="compare-label subtitle" id="compare-caption">iPhone 16: 71.6 × 147.6 × 7.8 mm. Keyboard: ${(60/71.6*100).toFixed(1)}% of phone width, ${(90/147.6*100).toFixed(1)}% of phone height.</p></section><aside><p class="aside-label">PARTS</p><div class="part-list">${rows}</div></aside></div><footer class="foot"><div><a href="../exports/iphone16-keyboard-beside-v02.glb">Download 3D model ↗</a></div></footer>`;
+const htmlbody=`<div class="workbench"><section><div class="toolbar"><nav class="tabs" aria-label="View"><button data-view="exploded" aria-pressed="true">Layers</button><button data-view="inside" aria-pressed="false">Inside</button><button data-view="compare" aria-pressed="false">iPhone</button></nav><button class="action" id="reset">Reset view</button></div>${plate}<div class="controlbar"><div class="range-wrap"><label for="explode">Separation</label><input id="explode" type="range" min="0" max="100" value="78" aria-label="Layer separation"><output for="explode" id="percent">78%</output></div><button class="action" id="tour" aria-pressed="false">Play</button></div><p class="compare-label subtitle" id="compare-caption">iPhone 16: 71.6 × 147.6 × 7.8 mm. Keyboard: ${(60/71.6*100).toFixed(1)}% of phone width, ${(90/147.6*100).toFixed(1)}% of phone height.</p></section><aside><p class="aside-label">PARTS</p><div class="part-list">${rows}</div></aside></div><footer class="foot"><div><a href="../exports/iphone16-keyboard-beside-v02.glb">Download 3D model ↗</a></div></footer>`;
 const live=`
 const groups=${JSON.stringify(groups)};
 const stage=document.querySelector('.iso-stage'), range=document.querySelector('#explode'),readout=document.querySelector('[data-readout]'),percent=document.querySelector('#percent');
@@ -136,7 +136,6 @@ range.addEventListener('input',()=>{tour(false);target=+range.value/100;run();})
 document.querySelectorAll('[data-select]').forEach(b=>b.addEventListener('click',()=>select(+b.dataset.select)));
 stage.addEventListener('click',e=>{const p=e.target.closest('.cad-part');if(p&&+p.dataset.layer>=0)select(+p.dataset.layer);});
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>mode(b.dataset.view)));
-document.querySelector('#theme').onclick=()=>{const light=document.body.dataset.theme!=='light';document.body.dataset.theme=light?'light':'dark';document.querySelector('#theme').textContent=light?'Dark ↗':'Light ↗';};
 document.querySelector('#tour').onclick=()=>{if(view!=='exploded')mode('exploded');tour(!touring);};
 document.querySelector('#zoom').onclick=()=>zoomTo(zoom===1?1.6:zoom===1.6?2.4:1);
 stage.addEventListener('pointerdown',e=>{if(zoom<=1)return;const box=stage.getBoundingClientRect();drag={x:e.clientX,y:e.clientY,px:panX,py:panY,s:1060/zoom/box.width};stage.setPointerCapture(e.pointerId);});
@@ -155,6 +154,6 @@ const fixedLive=live.replace("selected=-1;select(-2);selected=-1;","zoomTo(1);se
 let html=k.pageHtml({title:'Keyboard · Inside',theme,body:htmlbody,script:fixedLive,width:1376});
 html=html.replace('<html lang="en">','<html lang="en">').replace('</style>','\n'+extraCSS+'</style>');
 html=html.replace('<button class="action" id="reset">Reset view</button>','<div style="display:flex;gap:6px"><button class="action" id="zoom" aria-label="Zoom in, then drag to inspect details">Zoom in +</button><button class="action" id="reset">Reset</button></div>');
-writeFileSync(resolve(out,theme==='light'?'index-light.html':'index.html'),html);
+for(const name of ['index.html','index-light.html'])writeFileSync(resolve(out,name),html);
 writeFileSync(resolve(out,'provenance.json'),JSON.stringify({repository:'https://github.com/neekitalian/anatomy',commit:'1482e8469b0a9e0d8cc18ea2740a01423d29ae80',adapter:'actual CAD triangle meshes projected through iso-kit, four-tone shading and SVG animation; not primitive-based A.audit geometry',cad:data.source,partCount:data.card.length,phone:data.dimensions.phone},null,2));
 console.log('wrote',theme,'actual CAD parts',data.card.length,'HTML MB',(html.length/1e6).toFixed(2));
