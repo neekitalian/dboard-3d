@@ -1,0 +1,32 @@
+WHITE CARD — DESIGN REVIEW
+
+Appearance
+- Solid white, opaque body and front face. No transparent windows or exposed internals in assembled use.
+- Smooth continuous touch surface. No PLAUD-style ribs.
+- Nine visible touch zones; restrained neutral-grey printed boundaries and editable Hangul legends. No raised mechanical keycaps.
+- No red or other coloured accent. Fasteners blend into the white body.
+- Existing 60 x 90 mm footprint retained.
+
+Thickness
+- New target: approximately 3.0 mm, benchmarked against the PLAUD Note's published 2.99 mm device thickness.
+- Reference: https://jp.plaud.ai/products/plaud-note-ai-voice-recorder (checked 2026-11-27).
+- This reference does not establish the thickness of the complete magnetic case/mounting system.
+- Current CAD and white appearance GLB remain 5.8 mm thick. The preview is an appearance review, not a validated 3 mm assembly.
+- Do not compress component models or silently remove functions to meet the target.
+
+Retained functions
+- Continuous capacitive gestures across nine zones; local dome press feedback.
+- BLE, battery, USB-C and magnetic attachment remain requirements.
+- Phone wireless charging through the installed accessory remains a feasibility target, not a proven function.
+
+Engineering work before a thin production model
+- Repack the battery, touch/PCB layers, magnet ring and dome support into an explicitly dimensioned cross-section.
+- Select actual battery and low-profile connector/assembly architecture; assess USB-C opening and wall allowance against the 3 mm target.
+- Validate touch sensing through the opaque white finish, press force, travel, deflection and adjacent-zone behaviour.
+- Evaluate wireless charging, temperatures and phone/camera fit on selected devices.
+- Produce revised CAD plus interference, clearance and manufacturing checks after the stack-up is agreed.
+
+Review boundary
+- v05 supplies a white appearance preview, editable Blender scenes and assembled appearance GLB.
+- Existing STEP remains the earlier 5.8 mm engineering review geometry.
+- No active LCD/OLED display has been specified or added.

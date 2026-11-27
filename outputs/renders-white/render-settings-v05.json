@@ -1,0 +1,111 @@
+{
+  "source_glb": "outputs/exports/hangul-card-review-v02.glb",
+  "cad_source_meshes": 49,
+  "render_style": "solid white opaque body and smooth touch face; neutral grey legends for readability; no red accent",
+  "skill": "kevinbadi/blender-skills/product-polish, custom headless Cycles adaptation",
+  "skill_commit": "b2f0f816d320b56ae86d52597a35284e0e6cc929",
+  "shots": [
+    {
+      "scene": "01 Hero",
+      "file": "01-hero-v05.png",
+      "size": [
+        3000,
+        2400
+      ],
+      "samples": 256,
+      "lens_mm": 85
+    },
+    {
+      "scene": "02 Top",
+      "file": "02-top-v05.png",
+      "size": [
+        2400,
+        3000
+      ],
+      "samples": 256,
+      "lens_mm": 85
+    },
+    {
+      "scene": "03 Exploded",
+      "file": "03-exploded-v05.png",
+      "size": [
+        3000,
+        3000
+      ],
+      "samples": 256,
+      "lens_mm": 85
+    },
+    {
+      "scene": "04 Attached",
+      "file": "04-attached-v05.png",
+      "size": [
+        2400,
+        3000
+      ],
+      "samples": 256,
+      "lens_mm": 85
+    }
+  ],
+  "legend_layout": [
+    [
+      "ㅅ",
+      -18,
+      18
+    ],
+    [
+      "ㅜ",
+      0,
+      18
+    ],
+    [
+      "ㄱ",
+      18,
+      18
+    ],
+    [
+      "ㅏ",
+      -18,
+      0
+    ],
+    [
+      "ㅇ",
+      0,
+      0
+    ],
+    [
+      "ㅓ",
+      18,
+      0
+    ],
+    [
+      "ㄴ",
+      -18,
+      -18
+    ],
+    [
+      "ㅗ",
+      0,
+      -18
+    ],
+    [
+      "ㅁ",
+      18,
+      -18
+    ]
+  ],
+  "render_only_additions": [
+    "Hangul printed dots replacing graphic symbols",
+    "thin white zone grid",
+    "one red status dot",
+    "illustrative PCB traces, pads and silkscreen",
+    "35 micrometer cover highlight bevel",
+    "opaque top face material revision; geometry unchanged"
+  ],
+  "optical_stack": "Coincident bonded finish/sensor/carrier interfaces are omitted in assembled beauty passes; individual film meshes remain editable and sensor/carrier appear in exploded view.",
+  "limits": [
+    "Surface traces are illustrative, not routed electronics",
+    "Attached phone and camera details remain schematic",
+    "No physical print/charging/force validation is implied",
+    "Appearance review retains 5.8 mm CAD geometry. New 2.99 mm thickness target requires structural redesign; this is not a 3 mm engineering model. Screen-like finish is passive, not an active display."
+  ]
+}

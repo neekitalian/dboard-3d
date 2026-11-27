@@ -9,7 +9,7 @@ A nine-zone touch keyboard accessory with parametric CAD, 3D models, an interact
 - 60 × 90 × 5.8 mm card with a continuous flexible touch surface.
 - Nine tactile dome zones, rather than mechanical switches.
 - Centered Ø57 mm magnet-ring envelope.
-- Opaque smooth black touch face, monochrome dot-matrix legends and visible internal structure.
+- Opaque smooth white touch face, monochrome dot-matrix legends and visible internal structure.
 - Separate shell, cover, PCB, domes, battery, electronics, magnets, fasteners and legends.
 
 This is a review prototype. Resin-print thin features need revision; FDM and molding warnings remain. Wireless charging, phone fit, key force and electrical functionality are unverified.
@@ -27,6 +27,12 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory outputs
 ```
 
 Open <http://127.0.0.1:8766/anatomy/index.html>. GitHub's HTML file preview displays source; it does not run the viewer.
+
+## White revision
+
+The latest direction is a solid white opaque body and smooth touch face with visible neutral-grey legends. [White appearance preview](outputs/renders-white/previews/01-hero-v05.png) · [White GLB](outputs/exports/hangul-card-white-v05.glb) · [Manufacturer brief](outputs/spec-white/design-brief-v05.txt).
+
+The new thickness target is approximately 3 mm, referenced to the PLAUD Note published 2.99 mm device thickness. Current CAD and appearance previews remain 5.8 mm; the internal stack-up requires redesign and review.
 
 ## Renders
 
