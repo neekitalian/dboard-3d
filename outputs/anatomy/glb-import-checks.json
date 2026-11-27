@@ -1,0 +1,22 @@
+[
+  {
+    "file": "iphone16-keyboard-beside-v02.glb",
+    "mesh_objects": 53,
+    "bounds_mm": [
+      145.60001343488693,
+      147.60002493858337,
+      13.600018806755543
+    ],
+    "status": "pass"
+  },
+  {
+    "file": "iphone16-keyboard-attached-v02.glb",
+    "mesh_objects": 53,
+    "bounds_mm": [
+      71.60000503063202,
+      147.60002493858337,
+      13.600020203739405
+    ],
+    "status": "pass"
+  }
+]

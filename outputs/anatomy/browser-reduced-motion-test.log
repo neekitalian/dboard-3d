@@ -1,0 +1,7 @@
+eval: undefined
+eval: "reduced motion passed"
+eval: "tour disabled under reduced motion"
+shot work/anatomy-mobile-compare.png · readout "iPHONE 16 / 71.6 × 147.6 mm"
+shot outputs/anatomy/preview-mobile.png · readout "49 PARTS · 60 × 90 × 5.8 mm"
+eval: "no horizontal overflow"
+console: clean

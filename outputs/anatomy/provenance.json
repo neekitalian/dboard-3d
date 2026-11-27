@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/neekitalian/anatomy",
+  "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+  "adapter": "actual CAD triangle meshes projected through iso-kit, four-tone shading and SVG animation; not primitive-based A.audit geometry",
+  "cad": "src/hangul_card.py, src/phone_comparison.py; CAD tessellation 0.08 mm / 0.25 rad",
+  "partCount": 49,
+  "phone": [
+    71.6,
+    147.6,
+    7.8
+  ]
+}
