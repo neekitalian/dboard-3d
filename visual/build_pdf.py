@@ -37,9 +37,6 @@ def wrap(c,s,x,y,width,size=11,leading=15.5,color=BLACK):
  return y
 def head(c,title):text(c,42,H-60,title,22,font='Head')
 def overview(c,page=None):
- head(c,'键盘结构')
- for x,big,small in [(42,'60 × 90 mm','外形尺寸')]:
-  text(c,x,718,big,18,font='Head');text(c,x,697,small,10,GREY)
  c.saveState();c.translate(30,300);c.scale(.75,.75);renderPDF.draw(drawing,c,0,0);c.restoreState()
  for i,(name,title,description) in enumerate(parts):
   p=anchors[name];x=30+(p['right']-260)*.5625;y=300+(690-p['y'])*.5625;ly=629-i*42
